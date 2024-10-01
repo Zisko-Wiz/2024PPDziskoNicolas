@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primer Parcial</title>
+        <script type="module" src="modulo.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="horizontal">
+            <div id="vertical">
+                <div id="datos">
+                    <form id=formDatos>
+                        <h1>Form Datos</h1><br>
+
+                        <label for="filtro">Filtrar Por:</label>
+                        <select id="filtro">
+                            <option value="todos" selected>Todos</option>
+                            <option value="terrestre">Terrestre</option>
+                            <option value="aereo">Aereo</option>
+                        </select>
+
+                        <br>
+                        <label for="promedio">Calcular Velocidad Promedio:</label>
+                        <input type="text" id="promedio" name="promedio">
+                        <input type="button" value="Calcular" id="calcularPromedio" name="calcularPromedio">
+                        <div id="columnas">
+                            <p>Mostrar Columnas:</p>
+                            <input type="checkbox" id="chk_id" name="chk_columnas" value="ID" checked>
+                            <label for="chk_id">ID</label>
+                            <input type="checkbox" id="chk_velMax" name="chk_columnas" value="VelMax" checked>
+                            <label for="chk_velMax">VelMax</label>
+                            <input type="checkbox" id="chk_modelo" name="chk_columnas" value="Modelo" checked>
+                            <label for="chk_modelo">Modelo</label>
+                            <input type="checkbox" id="chk_anoFab" name="chk_columnas" value="Fabricacion" checked>
+                            <label for="chk_anoFab">Fabricación</label>
+                            <input type="checkbox" id="chk_puertas" name="chk_columnas" value="Puertas" checked>
+                            <label for="chk_puertas">Puertas</label>
+                            <input type="checkbox" id="chk_ruedas" name="chk_columnas" value="Ruedas" checked>
+                            <label for="chk_ruedas">Ruedas</label>
+                            <input type="checkbox" id="chk_altura" name="chk_columnas" value="Altura" checked>
+                            <label for="chk_altura">Altura</label>
+                            <input type="checkbox" id="chk_autonomia" name="chk_columnas" value="Autonomia" checked>
+                            <label for="chk_autonomia">Autonomía</label>
+                        </div>
+                        <br>
+                        <div id="divTabla">
+                            <table id="tablaVehiculos">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>VelMax</th>
+                                    <th>Modelo</th>
+                                    <th>Fabricación</th>
+                                    <th>Puertas</th>
+                                    <th>Ruedas</th>
+                                    <th>Altura</th>
+                                    <th>Autonomía</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <input type="button" value="Agregar" id="btn_agregar">                        
+                    </form>
+                </div>
+                <div id="abm" style="display: none;">
+                    <h1>Formulario ABM</h1>
+                    <br>
+                    <p id="advertenciaInvalido" style="display: none;">Datos Inválidos</p>
+                    <label for="txt_id">ID:</label>
+                    <input type="text" id="txt_id" disabled>
+                    <br>
+                    <label for="txt_modelo">Modelo:</label>
+                    <input type="text" id="txt_modelo">
+                    <br>
+                    <label for="txt_velMax">Velocidad Máxima:</label>
+                    <input type="text" id="txt_velMax">
+                    <br>
+                    <label for="txt_anoFab">Año de Fabricación:</label>
+                    <input type="text" id="txt_anoFab">
+                    <br>
+                    <label for="select_tipo">Tipo:</label>
+                    <select id="select_tipo">
+                        <option value="terrestre" selected>Terrestre</option>
+                        <option value="aereo">Aereo</option>
+                    </select>
+                    <br>
+                    <div id="formTerrestre">
+                        <label for="txt_puertas">Cantidad de Puertas:</label>
+                        <input type="text" id="txt_puertas">
+                        <br>
+                        <label for="txt_ruedas">Cantidad de Ruedas:</label>
+                        <input type="text" id="txt_ruedas">
+                    </div>
+                    <div id="formAereo" style="display:none;">
+                        <label for="txt_altura">Altura Máxima:</label>
+                        <input type="text" id="txt_altura">
+                        <br>
+                        <label for="txt_autonomia">Autonomía:</label>
+                        <input type="text" id="txt_autonomia">
+                    </div>
+                    <br>
+                    <input type="button" id="btn_borrar" value ="Eliminar" style="display: none;">
+                    <input type="button" id="btn_aceptar" value="Aceptar">
+                    <input type="button" id="btn_cancelar" value="Cancelar">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
